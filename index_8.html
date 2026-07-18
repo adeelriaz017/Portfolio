@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adeel Riaz — Product Designer</title>
+<meta name="description" content="Adeel Riaz is a Product Designer / Senior UX-UI Designer with 6+ years of experience designing AI-augmented, user-centered products for SaaS, FinTech, EdTech and HealthTech teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#141311;
+    --bg-alt:#1B1A17;
+    --card:#1E1D19;
+    --ink:#F3EFE6;
+    --ink-soft:#A9A499;
+    --ink-faint:#726E64;
+    --accent:#8FE38C;
+    --accent-deep:#4FA84C;
+    --amber:#E2A25C;
+    --line:#2C2A25;
+    --cream:#F3EFE0;
+    --display:'Space Grotesk', sans-serif;
+    --body:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.001ms !important; transition-duration:.001ms !important;} }
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{margin:0; padding:0; list-style:none;}
+  h1,h2,h3,h4{margin:0; font-family:var(--display); font-weight:600; letter-spacing:-0.01em;}
+  p{margin:0;}
+  section{position:relative;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  .label{font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--amber);}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft);}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); display:inline-block; box-shadow:0 0 0 3px rgba(143,227,140,0.15);}
+
+  /* ---------- HEADER / NAV ---------- */
+  header{position:sticky; top:0; z-index:100; background:rgba(20,19,17,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{position:relative; max-width:var(--maxw); margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; gap:20px;}
+  .brand{line-height:1.15;}
+  .brand .name{font-family:var(--display); font-size:18px; font-weight:600;}
+  .brand .role{display:block; font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:var(--ink-faint); text-transform:uppercase; margin-top:2px;}
+  .nav-links{display:flex; gap:28px; align-items:center;}
+  .nav-links a{font-size:13.5px; font-weight:500; color:var(--ink-soft); transition:color .2s ease;}
+  .nav-links a:hover{color:var(--ink);}
+  .mobile-only-item{display:none;}
+  .nav-right{display:flex; align-items:center; gap:18px;}
+  .btn{font-family:var(--body); font-size:13.5px; font-weight:600; padding:11px 20px; border-radius:999px; display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); cursor:pointer; background:transparent; color:var(--ink); transition:all .2s ease; white-space:nowrap;}
+  .btn.primary{background:var(--cream); color:var(--bg); border-color:var(--cream);}
+  .btn.primary:hover{background:var(--accent); border-color:var(--accent); transform:translateY(-2px);}
+  .btn.ghost:hover{border-color:var(--ink-soft); transform:translateY(-2px);}
+  .btn.fiverr{border-color:var(--accent-deep); color:var(--accent);}
+  .btn.fiverr:hover{background:var(--accent-deep); color:#08130A;}
+  .menu-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px; z-index:5;}
+  .menu-toggle span{width:22px; height:2px; background:var(--ink); display:block; transition:transform .25s ease, opacity .25s ease;}
+  .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-toggle.open span:nth-child(2){opacity:0;}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  @media (max-width:880px){
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0; background:var(--bg);
+      border-bottom:1px solid var(--line); flex-direction:column; align-items:stretch;
+      padding:0 24px; max-height:0; overflow:hidden; gap:0;
+      transition:max-height .35s ease, padding .35s ease;
+    }
+    .nav-links.open{max-height:600px; padding:14px 24px 26px;}
+    .nav-links li{border-bottom:1px solid var(--line);}
+    .nav-links li:last-child{border-bottom:none;}
+    .nav-links a{display:block; padding:14px 0; font-size:15.5px;}
+    .mobile-only-item{display:block;}
+    .mobile-only-item a.btn{display:inline-flex; margin:14px 0 6px;}
+    .nav-right{display:none;}
+    .menu-toggle{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:80px 0 60px; text-align:left;}
+  .hero .wrap{max-width:var(--maxw);}
+  .hero-inner{max-width:760px; text-align:left;}
+  .hero h1{font-size:clamp(36px,6vw,56px); line-height:1.08; margin:20px 0 22px; text-align:left;}
+  .hero h1 em{font-style:italic; color:var(--accent); font-weight:500;}
+  .hero p.lead{font-size:16.5px; color:var(--ink-soft); max-width:600px; margin-bottom:30px; text-align:left;}
+  .hero-ctas{display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:flex-start;}
+  .hero-ctas .sub-link{font-size:13.5px; color:var(--ink-faint); border-bottom:1px dashed var(--ink-faint); padding-bottom:2px;}
+  .hero-ctas .sub-link:hover{color:var(--accent); border-color:var(--accent);}
+
+  /* ---------- SECTION HEAD ---------- */
+  .sect{padding:76px 0; border-top:1px solid var(--line);}
+  .sect-head{margin-bottom:40px; max-width:640px;}
+  .sect-head h2{font-size:clamp(26px,3.2vw,36px); margin:12px 0 14px;}
+  .sect-head p{color:var(--ink-soft); font-size:15.5px;}
+  .sect-top-row{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap;}
+
+  /* ---------- ABOUT ---------- */
+  .about-sect{padding:76px 0; border-top:1px solid var(--line);}
+  .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:52px; align-items:center;}
+  .about-portrait{position:relative;}
+  .about-portrait .frame{
+    aspect-ratio:4/5; border-radius:22px; overflow:hidden; position:relative;
+    background:
+      radial-gradient(circle at 25% 20%, rgba(143,227,140,0.18), transparent 55%),
+      radial-gradient(circle at 80% 85%, rgba(226,162,92,0.14), transparent 55%),
+      linear-gradient(155deg,#1E1D19,#0F0E0C);
+    border:1px solid var(--line);
+  }
+  .about-portrait .portrait-img{width:100%; height:100%; object-fit:cover; object-position:top center; display:block;}
+  .about-badge{
+    position:absolute; bottom:18px; left:18px; background:var(--amber); color:#241905;
+    border-radius:14px; padding:12px 18px; font-family:var(--mono); font-size:12px; line-height:1.4;
+    box-shadow:0 16px 30px -12px rgba(0,0,0,.5);
+  }
+  .about-badge strong{display:block; font-family:var(--body); font-size:14.5px; font-weight:700;}
+  .about-copy .label{display:block; margin-bottom:14px;}
+  .about-copy h2{font-size:clamp(26px,3.6vw,40px); line-height:1.15; margin-bottom:22px;}
+  .about-copy p{color:var(--ink-soft); font-size:15.5px; margin-bottom:16px; max-width:560px;}
+  .about-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+  .about-tags span{font-family:var(--mono); font-size:12px; padding:9px 16px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft);}
+  .about-cta-row{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr; gap:36px;} .about-portrait .frame{max-width:320px; margin:0 auto;}}
+
+  /* ---------- WORK / CASE CARDS ---------- */
+  .work-list{display:flex; flex-direction:column; gap:24px;}
+  .case-card{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:border-color .3s ease;}
+  .case-card:hover{border-color:#3a382f;}
+  .case-card-head{display:grid; grid-template-columns:1fr 1fr;}
+  .work-thumb{position:relative; min-height:260px; display:flex; align-items:center; justify-content:center; padding:28px;}
+  .work-thumb svg{width:70%; max-width:220px;}
+  .w1{background:linear-gradient(160deg,#3A2E6B,#171029);}
+  .w2{background:linear-gradient(160deg,#1E3B34,#0E1A16);}
+  .w3{background:linear-gradient(160deg,#123549,#08131A);}
+  .work-body{padding:28px 30px;}
+  .work-body .label{display:block; margin-bottom:12px;}
+  .work-body h3{font-size:21px; margin-bottom:10px; line-height:1.25;}
+  .work-body p.desc{color:var(--ink-soft); font-size:14.5px; margin-bottom:18px;}
+  .meta-row{display:flex; gap:26px; margin-bottom:18px; flex-wrap:wrap;}
+  .meta-row div{font-size:13px;}
+  .meta-row .m-label{font-family:var(--mono); font-size:10.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; display:block; margin-bottom:4px;}
+  .view-case-btn{
+    font-family:var(--body); font-size:13.5px; font-weight:600; color:var(--accent); background:none; border:none;
+    cursor:pointer; display:inline-flex; align-items:center; gap:8px; padding:0;
+  }
+  .view-case-btn .chev{transition:transform .3s ease; font-size:12px;}
+  .view-case-btn[aria-expanded="true"] .chev{transform:rotate(180deg);}
+  .view-case-btn:hover{text-decoration:underline;}
+  .ext-link{font-family:var(--body); font-size:13.5px; font-weight:600; color:var(--accent);}
+  .ext-link:hover{text-decoration:underline;}
+
+  @media (max-width:820px){ .case-card-head{grid-template-columns:1fr;} .work-thumb{min-height:200px;} }
+
+  /* ---------- CASE PANEL (accordion) ---------- */
+  .case-panel{display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s ease; border-top:1px solid var(--line);}
+  .case-panel.open{grid-template-rows:1fr;}
+  .case-panel > div{overflow:hidden;}
+  .case-panel-inner{padding:32px 30px 36px;}
+  .case-block{margin-bottom:26px;}
+  .case-block:last-child{margin-bottom:0;}
+  .case-block h4{font-size:13px; font-family:var(--mono); text-transform:uppercase; letter-spacing:.08em; color:var(--amber); margin-bottom:12px;}
+  .case-block p{color:var(--ink-soft); font-size:14.5px; line-height:1.65; margin-bottom:8px;}
+  .case-block ul{display:flex; flex-direction:column; gap:8px;}
+  .case-block ul li{font-size:14.5px; color:var(--ink-soft); padding-left:18px; position:relative; line-height:1.6;}
+  .case-block ul li::before{content:"•"; position:absolute; left:0; color:var(--accent);}
+  .case-block ul li strong{color:var(--ink); font-weight:600;}
+  .case-blocks-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 40px;}
+  @media (max-width:760px){.case-blocks-grid{grid-template-columns:1fr;}}
+
+  .case-gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:6px;}
+  .case-gallery figure{margin:0; border-radius:12px; overflow:hidden; border:1px solid var(--line); background:var(--bg-alt);}
+  .case-gallery img{width:100%; height:150px; object-fit:cover; display:block;}
+  .case-gallery figcaption{font-family:var(--mono); font-size:10.5px; color:var(--ink-faint); padding:8px 10px;}
+  @media (max-width:760px){.case-gallery{grid-template-columns:1fr 1fr;}}
+  @media (max-width:460px){.case-gallery{grid-template-columns:1fr;}}
+
+  /* ---------- MORE PROJECTS GRID ---------- */
+  .more-projects{margin-top:52px;}
+  .category-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:24px;}
+  .category{border-top:1px solid var(--line); padding-top:16px;}
+  .category h4{font-size:14px; font-family:var(--mono); text-transform:uppercase; letter-spacing:.08em; color:var(--amber); margin-bottom:12px;}
+  .category ul li{font-size:14.5px; color:var(--ink-soft); padding:6px 0; border-bottom:1px dashed var(--line);}
+  .category ul li:last-child{border-bottom:none;}
+  @media (max-width:820px){.category-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.category-grid{grid-template-columns:1fr;}}
+
+  /* ---------- WHAT I BRING ---------- */
+  .bring-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .bring-card{padding:28px 24px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .bring-card h3{font-size:16.5px; margin-bottom:10px;}
+  .bring-card p{font-size:14px; color:var(--ink-soft);}
+  @media (max-width:820px){.bring-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.bring-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PROCESS ---------- */
+  .process-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .process-card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 20px;}
+  .p-num{font-family:var(--mono); font-size:12px; color:var(--accent); display:block; margin-bottom:14px;}
+  .process-card h3{font-size:16.5px; margin-bottom:10px;}
+  .process-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55;}
+  @media (max-width:920px){.process-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.process-grid{grid-template-columns:1fr;}}
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{display:flex; flex-direction:column;}
+  .tl-item{display:grid; grid-template-columns:210px 1fr; gap:32px; padding:26px 0; border-top:1px solid var(--line);}
+  .tl-item:last-child{border-bottom:1px solid var(--line);}
+  .tl-when{font-family:var(--mono); font-size:12.5px; color:var(--ink-faint);}
+  .tl-role h3{font-size:18px; margin-bottom:4px;}
+  .tl-role .company{color:var(--accent); font-weight:600;}
+  .tl-role ul{display:flex; flex-direction:column; gap:8px; margin-top:12px;}
+  .tl-role ul li{font-size:14.5px; color:var(--ink-soft); padding-left:16px; position:relative;}
+  .tl-role ul li::before{content:"—"; position:absolute; left:0; color:var(--ink-faint);}
+  @media (max-width:720px){.tl-item{grid-template-columns:1fr; gap:8px;}}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .testi-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:28px;}
+  .testi-stars{color:var(--amber); font-size:14px; letter-spacing:2px; margin-bottom:16px;}
+  .testi-card q{font-size:15px; line-height:1.6; color:var(--ink); display:block; margin-bottom:20px; font-style:normal;}
+  .testi-person{display:flex; align-items:center; gap:12px;}
+  .testi-avatar{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--amber)); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:12px; font-weight:600; color:#111;}
+  .testi-person strong{display:block; font-size:14px;}
+  .testi-person span{font-size:12.5px; color:var(--ink-faint);}
+  @media (max-width:760px){.testi-grid{grid-template-columns:1fr;}}
+  .fiverr-strip{
+    margin-top:32px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    background:var(--bg-alt); border:1px solid var(--line); border-radius:14px; padding:22px 26px;
+  }
+  .fiverr-strip p{font-size:14px; color:var(--ink-soft);}
+  .fiverr-strip strong{color:var(--ink);}
+
+  /* ---------- EDU / CERTS ---------- */
+  .edu-cert{display:grid; grid-template-columns:1fr 1.4fr; gap:56px;}
+  .edu-block h3{font-size:16px; margin-bottom:6px;}
+  .edu-block p{font-size:14.5px; color:var(--ink-soft);}
+  .cert-list{display:flex; flex-direction:column; gap:2px;}
+  .cert-item{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:16px 0; border-bottom:1px solid var(--line);}
+  .cert-item span{font-size:14.5px;}
+  .cert-item a{font-family:var(--mono); font-size:12px; color:var(--accent); white-space:nowrap;}
+  .cert-item a:hover{text-decoration:underline;}
+  @media (max-width:820px){.edu-cert{grid-template-columns:1fr; gap:36px;}}
+
+  /* ---------- TOOLS ---------- */
+  .tool-chips{display:flex; flex-wrap:wrap; gap:10px;}
+  .chip{font-family:var(--mono); font-size:13px; padding:9px 16px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); background:var(--card);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:64px 40px; text-align:left; background:var(--cream); color:var(--bg); border-radius:24px;}
+  .contact-inner{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:center;}
+  .contact h2{font-size:clamp(28px,3.6vw,42px); margin-bottom:14px;}
+  .contact p{font-size:16px; color:#4A473E; max-width:440px;}
+  .contact-ctas{display:flex; flex-direction:column; gap:14px; align-items:flex-start;}
+  .contact .btn.primary{background:var(--bg); color:var(--cream); border-color:var(--bg);}
+  .contact .btn.primary:hover{background:var(--accent-deep); border-color:var(--accent-deep); color:#fff;}
+  .contact .btn.ghost{border-color:#B9B5A6; color:#4A473E;}
+  .contact .btn.fiverr{border-color:#1DBF73; color:#1DBF73; background:transparent;}
+  .contact .btn.fiverr:hover{background:#1DBF73; color:#fff;}
+  .contact .direct{font-family:var(--mono); font-size:13px; color:#4A473E;}
+  .contact .direct a{border-bottom:1px solid #4A473E;}
+  @media (max-width:820px){.contact-inner{grid-template-columns:1fr;} .contact{padding:40px 24px; border-radius:18px;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:48px 0 36px;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px;}
+  footer .f-brand p{font-size:13.5px; color:var(--ink-faint); max-width:280px; margin-top:8px;}
+  footer .f-cols{display:flex; gap:56px; flex-wrap:wrap;}
+  footer .f-col h5{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:12px;}
+  footer .f-col a{display:block; font-size:13.5px; color:var(--ink-soft); margin-bottom:8px;}
+  footer .f-col a:hover{color:var(--ink);}
+  .foot-bottom{max-width:var(--maxw); margin:36px auto 0; padding:20px 32px 0; border-top:1px solid var(--line); display:flex; justify-content:space-between; font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); flex-wrap:wrap; gap:10px;}
+
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <span class="name">Adeel Riaz</span>
+      <span class="role">Product Designer</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#bring">What I Bring</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li class="mobile-only-item"><a href="https://www.fiverr.com/s/Ay9vEdY" target="_blank" rel="noopener">Fiverr Profile ↗</a></li>
+      <li class="mobile-only-item"><a href="mailto:adeelriaz017@gmail.com" class="btn primary">Start a conversation</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="eyebrow"><span class="dot"></span>Open to new roles</span>
+      <a href="mailto:adeelriaz017@gmail.com" class="btn primary">Start a conversation</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="eyebrow"><span class="dot"></span>Open to Product Design / Senior UX-UI roles</span>
+        <h1>Designing <em>AI-augmented</em> products for complex problems</h1>
+        <p class="lead">Multidisciplinary UI/UX Designer with 6+ years across web, mobile, B2B and B2C products. I pair AI-assisted research and rapid prototyping with a decade-tested design process — turning fuzzy requirements into interfaces that ship, for SaaS, FinTech, EdTech, HealthTech and Grant Management teams.</p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn primary">View case studies</a>
+          <a href="mailto:adeelriaz017@gmail.com" class="btn ghost">Start a conversation</a>
+          <a href="https://www.fiverr.com/s/Ay9vEdY" class="btn fiverr" target="_blank" rel="noopener">Hire me on Fiverr</a>
+          <a href="https://www.behance.net/adeelriaz02e1b" class="sub-link" target="_blank" rel="noopener">Behance portfolio ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-sect" id="about">
+    <div class="wrap about-grid">
+      <div class="about-portrait reveal">
+        <div class="frame">
+          <img src="assets/adeel-portrait.png" alt="Adeel Riaz" class="portrait-img">
+        </div>
+        <div class="about-badge"><strong>Lahore</strong>Pakistan</div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="label">[ About ]</span>
+        <h2>I design software for people who never signed up to learn it.</h2>
+        <p>For 6+ years I've designed web, mobile, B2B and B2C products where the stakes are real — grant funding decisions, fintech transactions, student learning outcomes, and patient-facing healthcare tools. My work has shipped across SaaS, FinTech, EdTech, HealthTech, mobility and e-commerce.</p>
+        <p>I lead with product thinking: research and ambiguity get turned into clear flows and design systems, then handed off in a way engineering can actually build from. Lately that means folding AI tools — Claude, ChatGPT, Figma AI and Stitch — into requirement analysis, research synthesis and rapid prototyping, so I can move faster without cutting corners on usability.</p>
+        <div class="about-tags">
+          <span>Product Design</span>
+          <span>UX Strategy</span>
+          <span>AI-Augmented Design</span>
+          <span>Design Systems</span>
+          <span>SaaS &amp; B2B</span>
+          <span>Design Leadership</span>
+        </div>
+        <div class="about-cta-row">
+          <a href="Adeel_Resume.pdf" class="btn primary" download>Download CV</a>
+          <a href="https://www.fiverr.com/s/Ay9vEdY" class="btn fiverr" target="_blank" rel="noopener">View Fiverr Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="sect" id="work">
+    <div class="wrap">
+      <div class="sect-top-row sect-head reveal">
+        <div>
+          <span class="label">01 · Selected work</span>
+          <h2>Case studies, not just screenshots</h2>
+          <p>What the team knew, what we tried, what shipped, and the impact. Tap "View Case Study" to expand the full breakdown.</p>
+        </div>
+      </div>
+
+      <div class="work-list">
+
+        <!-- GRANT ASSISTANT -->
+        <div class="case-card reveal">
+          <div class="case-card-head">
+            <div class="work-thumb w1">
+              <svg viewBox="0 0 100 100" fill="none"><rect x="15" y="15" width="70" height="50" rx="4" stroke="#8FE38C" stroke-width="1.5" opacity=".8"/><rect x="22" y="24" width="30" height="6" rx="2" fill="#8FE38C" opacity=".6"/><rect x="22" y="36" width="50" height="4" rx="2" fill="#8FE38C" opacity=".35"/><rect x="22" y="44" width="40" height="4" rx="2" fill="#8FE38C" opacity=".35"/><circle cx="70" cy="30" r="8" stroke="#8FE38C" stroke-width="1.5" opacity=".6"/></svg>
+            </div>
+            <div class="work-body">
+              <span class="label">Professional work · Design systems, SaaS, Product design</span>
+              <h3>Grant Assistant — design systems and AI-native product design</h3>
+              <p class="desc">Leading product design for an AI-powered grant-management platform used by nonprofits, INGOs and development organizations.</p>
+              <div class="meta-row">
+                <div><span class="m-label">Role</span>Product Designer</div>
+                <div><span class="m-label">Duration</span>Feb 2025 – present</div>
+                <div><span class="m-label">Platform</span>Web app</div>
+              </div>
+              <button class="view-case-btn" aria-expanded="false" data-target="panel-grant">View Case Study <span class="chev">⌄</span></button>
+            </div>
+          </div>
+          <div class="case-panel" id="panel-grant">
+            <div><div class="case-panel-inner">
+              <div class="case-blocks-grid">
+                <div class="case-block">
+                  <h4>The context</h4>
+                  <p>Joined Grant Assistant — an AI-powered grant-management platform — as Product Designer in February 2025, shortly after the product's acquisition by FreeWill in October 2024. The platform helps nonprofits, INGOs and development organizations find funding and draft stronger proposals faster.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Challenges</h4>
+                  <ul>
+                    <li>No mature design system — inconsistent components pulled from mismatched UI libraries</li>
+                    <li>Heavy, fragmented codebase slowing development</li>
+                    <li>Compliance-heavy, ambiguous requirements to translate into shippable UX</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>Problems identified</h4>
+                  <ul>
+                    <li>Inconsistent patterns across core screens</li>
+                    <li>Proposal-creation flow too long and complex for the 45+ grant-writer persona</li>
+                    <li>Manual re-entry of organisation details during onboarding</li>
+                    <li>Opportunity records split awkwardly by funding cycle</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>Improvements made</h4>
+                  <ul>
+                    <li>Built and documented a <strong>50+ component design system</strong> in Figma — tokens, typography, color, spacing, states</li>
+                    <li>Aligned Figma components with the production front-end library alongside engineering</li>
+                    <li>Redesigned the AI-assisted proposal editor for familiarity and ease of navigation</li>
+                    <li>Built an internal pre-fill tool for customer-success onboarding</li>
+                    <li>Restructured opportunities into one central record per funding cycle</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>How it was delivered</h4>
+                  <p>Owned design end-to-end — problem definition, user flows, prototyping, developer handoff and implementation review — while running design reviews with product managers, engineers and executives on a product where compliance and funder trust leave little room for error.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Impact</h4>
+                  <ul>
+                    <li>Design system now supports <strong>10+ designers and engineers</strong> day to day</li>
+                    <li>Reduced design-to-development handoff overhead</li>
+                    <li>Simpler onboarding and a tighter proposal flow</li>
+                    <li>Design partner on a platform strong enough to be <strong>acquired by FreeWill</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- EDKASA -->
+        <div class="case-card reveal">
+          <div class="case-card-head">
+            <div class="work-thumb w2">
+              <svg viewBox="0 0 100 100" fill="none"><rect x="30" y="10" width="20" height="40" rx="6" stroke="#8FE38C" stroke-width="1.5" opacity=".8"/><rect x="55" y="30" width="20" height="40" rx="6" stroke="#8FE38C" stroke-width="1.5" opacity=".6"/><circle cx="40" cy="30" r="3" fill="#8FE38C"/><circle cx="65" cy="50" r="3" fill="#8FE38C"/></svg>
+            </div>
+            <div class="work-body">
+              <span class="label">Professional work · Mobile, EdTech, Design systems</span>
+              <h3>Edkasa — reimagining an ed-tech platform for more motivating learning</h3>
+              <p class="desc">End-to-end redesign of Edkasa's mobile learning experience for iOS and Android, built around student and stakeholder research.</p>
+              <div class="meta-row">
+                <div><span class="m-label">Role</span>Product Designer</div>
+                <div><span class="m-label">Duration</span>12 months</div>
+                <div><span class="m-label">Platform</span>iOS &amp; Android</div>
+              </div>
+              <button class="view-case-btn" aria-expanded="false" data-target="panel-edkasa">View Case Study <span class="chev">⌄</span></button>
+            </div>
+          </div>
+          <div class="case-panel" id="panel-edkasa">
+            <div><div class="case-panel-inner">
+              <div class="case-blocks-grid">
+                <div class="case-block">
+                  <h4>The context</h4>
+                  <p>Edkasa is a fast-growing Pakistani ed-tech platform recording 1.3 million hours of viewing time across thousands of students. I joined as the product's sole designer for a 12-month engagement to redesign the mobile experience for iOS and Android.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Challenges</h4>
+                  <ul>
+                    <li>App was difficult to navigate and visually uninspiring</li>
+                    <li>Needed alignment across students, stakeholders, developers and finance experts</li>
+                    <li>Balancing gamification without letting it overpower learning</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>Problems identified</h4>
+                  <ul>
+                    <li>Students couldn't see their learning progress clearly — low motivation, impersonal feel</li>
+                    <li>Limited support for competitive or personalized learning</li>
+                    <li>Teachers lacked resources and guidance for delivering live classes</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>Improvements made</h4>
+                  <ul>
+                    <li>Simplified navigation around core tasks: subjects, lessons, tests, results, live classes</li>
+                    <li>Surfaced progress, report-card data, rankings and points at a glance</li>
+                    <li>Added gamification — rankings, quiz results, shareable achievements — kept in balance</li>
+                    <li>Built the design system in parallel: typography, color, icons, cards, fields, buttons, states</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>How it was delivered</h4>
+                  <p>Owned research, user interviews, UX/UI design, wireframing, prototyping and design-system development end-to-end — shipping the dashboard, subject prep, lessons, tests, report cards, rankings, live classes, teacher support, notifications, packages, payments and social sharing.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Impact</h4>
+                  <p>Replaced a fragmented experience with a coherent, scalable product structure. Progress, performance and live learning became central parts of the experience — delivered as a unified redesign for a platform serving thousands of learners and 1.3 million hours of viewing time.</p>
+                </div>
+              </div>
+
+              <div class="case-block" style="margin-top:8px;">
+                <h4>Design &amp; process gallery</h4>
+                <div class="case-gallery">
+                  <figure>
+                    <img src="assets/wireframe-1.jpg" alt="Edkasa low-fidelity wireframes — subjects, report card, home">
+                    <figcaption>Low-fidelity wireframes</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/wireframe-2.jpg" alt="Edkasa wireframes — unlock flow, test results, quiz result">
+                    <figcaption>Flow &amp; results wireframes</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/design-system.jpg" alt="Edkasa design system — colors, type, components">
+                    <figcaption>Design system</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="assets/ui-showcase.jpg" alt="Edkasa final high-fidelity UI screens">
+                    <figcaption>Final UI screens</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- AFT WALLET (no accordion, external link only) -->
+        <div class="case-card reveal">
+          <div class="case-card-head">
+            <div class="work-thumb w3">
+              <svg viewBox="0 0 100 100" fill="none"><path d="M20 65 L35 40 L50 55 L65 25 L80 45" stroke="#8FE38C" stroke-width="2" fill="none" opacity=".8"/><circle cx="65" cy="25" r="3" fill="#8FE38C"/><circle cx="80" cy="45" r="3" fill="#8FE38C"/></svg>
+            </div>
+            <div class="work-body">
+              <span class="label">Professional work · FinTech, Dashboard</span>
+              <h3>AFT Wallet — a clearer FinTech dashboard</h3>
+              <p class="desc">Designed the dashboard and core flows for a FinTech wallet product, translating business and compliance requirements into production-ready interfaces.</p>
+              <div class="meta-row">
+                <div><span class="m-label">Role</span>UX/UI Designer</div>
+                <div><span class="m-label">Duration</span>Client engagement</div>
+                <div><span class="m-label">Platform</span>Web app</div>
+              </div>
+              <a href="https://www.behance.net/adeelriaz02e1b" class="ext-link" target="_blank" rel="noopener">See on Behance →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="more-projects reveal">
+        <span class="label">More projects</span>
+        <div class="category-grid">
+          <div class="category">
+            <h4>SaaS &amp; Enterprise</h4>
+            <ul><li>Onebyte Website</li><li>Augment Scale Website</li><li>Daftarkhwan Exchange</li><li>Donation — TeeTag Dashboard</li></ul>
+          </div>
+          <div class="category">
+            <h4>EdTech</h4>
+            <ul><li>Teaching Circle — Learning Platform</li><li>Senpi App</li></ul>
+          </div>
+          <div class="category">
+            <h4>HealthTech</h4>
+            <ul><li>EON Health &amp; Patient Platform</li></ul>
+          </div>
+          <div class="category">
+            <h4>Mobility</h4>
+            <ul><li>ChargeShare — EV Charging Station App</li><li>YoCar.pk</li></ul>
+          </div>
+          <div class="category">
+            <h4>E-commerce &amp; Agriculture</h4>
+            <ul><li>E-commerce App</li><li>E-Agriculture App</li></ul>
+          </div>
+          <div class="category">
+            <h4>Fitness &amp; Travel</h4>
+            <ul><li>Kochmee Fitness App (Light &amp; Dark mode)</li><li>Villa Vie — Cruise Ship Super App</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I BRING -->
+  <section class="sect" id="bring">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">02 · What I bring</span>
+        <h2>End-to-end product design, grounded in evidence</h2>
+        <p>The craft spans research through delivery. The value is in connecting them: every visual decision should trace back to something a user needs or a metric the business watches.</p>
+      </div>
+      <div class="bring-grid">
+        <div class="bring-card reveal"><h3>Product thinking</h3><p>Design decisions framed around user needs and business goals — not just screens. I ask what a feature is for before asking what it looks like.</p></div>
+        <div class="bring-card reveal"><h3>UX research</h3><p>Interviews, usability tests, and analytics reviews sized to the risk of the decision, so the team ships evidence instead of assumptions.</p></div>
+        <div class="bring-card reveal"><h3>Interaction design</h3><p>Flows, states, and edge cases worked through end-to-end — including the empty, error, and loading states that make products feel finished.</p></div>
+        <div class="bring-card reveal"><h3>Visual design</h3><p>Clear hierarchy, accessible contrast, and restrained aesthetics that keep attention on the task rather than the decoration.</p></div>
+        <div class="bring-card reveal"><h3>Prototyping</h3><p>Interactive prototypes at the lowest fidelity that answers the question — from clickable wireframes to high-fidelity flows for testing.</p></div>
+        <div class="bring-card reveal"><h3>Design systems</h3><p>Tokens, components, and documentation that scale design across a team and keep the product consistent as it grows.</p></div>
+        <div class="bring-card reveal"><h3>Developer collaboration</h3><p>Specs, annotations, and ongoing pairing that respect engineering constraints — handoff as a conversation, not a file drop.</p></div>
+        <div class="bring-card reveal"><h3>Remote communication</h3><p>Clear async writing, recorded walkthroughs, and structured critique that keep distributed teams aligned across time zones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sect" id="process">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">03 · Process</span>
+        <h2>A process that adapts to the problem</h2>
+        <p>These are the activities, not a conveyor belt. A late-stage usability fix doesn't need discovery interviews; a new product bet does. The mix depends on the product's stage, risk, timeline, and the evidence already available.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-card reveal"><span class="p-num">01</span><h3>Understand</h3><p>Clarify the product goal, the audience, the constraints, and what success looks like before touching any interface.</p></div>
+        <div class="process-card reveal"><span class="p-num">02</span><h3>Research</h3><p>Gather evidence — user interviews, analytics, support tickets, competitor reviews — proportional to the risk of getting it wrong.</p></div>
+        <div class="process-card reveal"><span class="p-num">03</span><h3>Define</h3><p>Turn findings into a sharp problem statement, priorities, and measurable design goals the team agrees on.</p></div>
+        <div class="process-card reveal"><span class="p-num">04</span><h3>Explore</h3><p>Diverge deliberately: flows, sketches, and structural alternatives before committing to a direction.</p></div>
+        <div class="process-card reveal"><span class="p-num">05</span><h3>Prototype</h3><p>Make the promising direction tangible at the lowest fidelity that can answer the open questions.</p></div>
+        <div class="process-card reveal"><span class="p-num">06</span><h3>Test</h3><p>Put the prototype in front of real users, watch where it fails, and separate opinion from observation.</p></div>
+        <div class="process-card reveal"><span class="p-num">07</span><h3>Deliver</h3><p>Ship specs, tokens, and edge cases developers can build from — then stay close through implementation and iteration.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="sect" id="experience">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">04 · Professional experience</span>
+        <h2>6+ years across SaaS, FinTech, EdTech &amp; HealthTech</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-when">February 2025 – Present<br>Lahore, Pakistan</div>
+          <div class="tl-role">
+            <h3><span class="company">Freewill</span> (Grant Assistant AI) · Product Designer</h3>
+            <ul>
+              <li>Led end-to-end UX design for grant management and AI-powered workflows.</li>
+              <li>Designed complex dashboard experiences used by internal teams and customers.</li>
+              <li>Established reusable design patterns and scalable design-system components.</li>
+              <li>Leveraged AI-assisted research synthesis and requirement analysis to accelerate design delivery.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">2 years<br>Lahore, Pakistan</div>
+          <div class="tl-role">
+            <h3><span class="company">Augment Scale</span> · Senior UX/UI Designer &amp; Webflow / WordPress Developer</h3>
+            <ul>
+              <li>Designed SaaS, web, and mobile products.</li>
+              <li>Created user flows, wireframes, and high-fidelity interfaces.</li>
+              <li>Built reusable design-system components.</li>
+              <li>Collaborated with stakeholders and developers to deliver user-centered solutions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">7 months<br>Lahore, Pakistan</div>
+          <div class="tl-role"><h3><span class="company">We Execute</span> · Senior UX/UI Designer</h3></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">3.5 years<br>Lahore, Pakistan</div>
+          <div class="tl-role">
+            <h3><span class="company">OneByte</span> · UX/UI Designer</h3>
+            <ul>
+              <li>Designed web and mobile experiences for multiple clients.</li>
+              <li>Conducted UX research and requirement analysis.</li>
+              <li>Created wireframes, prototypes, and UI designs.</li>
+              <li>Worked closely with clients and development teams.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-when">1 year 5 months<br>Faisalabad, Pakistan</div>
+          <div class="tl-role"><h3><span class="company">WaaS Software Company</span> · Graphic &amp; UX/UI Designer</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sect" id="testimonials">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">05 · Testimonials</span>
+        <h2>What clients say about working with me</h2>
+        <p>Reviews from real client engagements on Fiverr.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <q>He has a great knowledge of UX and UI. I've bought his service multiple times and he always gives a good response, every time.</q>
+          <div class="testi-person">
+            <div class="testi-avatar">A</div>
+            <div><strong>akpofureogaga</strong><span>🇺🇸 United States · Repeat client</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <q>Fantastic job! Adeel never made me feel rushed or hesitant to ask for changes, no matter how big or small. His willingness to collaborate and iterate until we achieved perfection was truly commendable.</q>
+          <div class="testi-person">
+            <div class="testi-avatar">T</div>
+            <div><strong>tado2019</strong><span>🇩🇪 Germany</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <q>Absolutely great. A breath of fresh air to work with, and I've honestly made a new friend from this. It's almost unfair to only be able to offer 5 stars.</q>
+          <div class="testi-person">
+            <div class="testi-avatar">D</div>
+            <div><strong>dadey009</strong><span>🇬🇧 United Kingdom</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <q>If you're looking for a UX designer who can blend creativity, experience, and a patient approach to craft unforgettable user experiences — look no further. I recommend Adeel to anyone aiming to deliver the best experience for their website visitors.</q>
+          <div class="testi-person">
+            <div class="testi-avatar">T</div>
+            <div><strong>tado2019</strong><span>🇩🇪 Germany</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fiverr-strip reveal">
+        <p><strong>5-star rated on Fiverr</strong> — see all reviews and services on my profile.</p>
+        <a href="https://www.fiverr.com/s/Ay9vEdY" class="btn fiverr" target="_blank" rel="noopener">View Fiverr Profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION / CERTIFICATIONS -->
+  <section class="sect">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">06 · Education &amp; certification</span>
+        <h2>Grounded in computer science, sharpened by continuous learning</h2>
+      </div>
+      <div class="edu-cert">
+        <div class="edu-block reveal">
+          <span class="label">Education</span>
+          <h3 style="margin-top:14px;">BS Computer Science (Software Engineering)</h3>
+          <p>Lahore, Pakistan</p>
+        </div>
+        <div class="reveal">
+          <span class="label">Certifications · Interaction Design Foundation</span>
+          <div class="cert-list" style="margin-top:14px;">
+            <div class="cert-item"><span>Mobile User Experience</span><a href="https://www.interaction-design.org/adeel-riaz/certificate/course/1399470f-166e-44a9-9a3d-5362a1be8870" target="_blank" rel="noopener">View ↗</a></div>
+            <div class="cert-item"><span>Human Computer Interaction (HCI)</span><a href="https://www.interaction-design.org/adeel-riaz/certificate/course/1399470f-166e-44a9-9a3d-5362a1be8870" target="_blank" rel="noopener">View ↗</a></div>
+            <div class="cert-item"><span>User Experience: The Beginner's Guide</span><a href="https://www.interaction-design.org/adeel-riaz/certificate/course/1399470f-166e-44a9-9a3d-5362a1be8870" target="_blank" rel="noopener">View ↗</a></div>
+            <div class="cert-item"><span>Data-Driven Design: Quantitative Research for UX</span><a href="https://www.interaction-design.org/members/adeel-riaz/certificate/course/07bb6e40-0e5f-45a6-b702-ab71ae00361e" target="_blank" rel="noopener">View ↗</a></div>
+            <div class="cert-item"><span>Mobile UX Strategy: How to Build Successful Products</span><a href="https://www.interaction-design.org/members/adeel-riaz/certificate/course/d1ade856-1b8a-4fca-8e0c-e12694ed1bd0" target="_blank" rel="noopener">View ↗</a></div>
+            <div class="cert-item"><span>Perception and Memory in HCI and UX</span><a href="https://www.interaction-design.org/members/adeel-riaz/certificate/course/aefd162a-7899-4eac-b722-bb6503afc4be" target="_blank" rel="noopener">View ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="sect">
+    <div class="wrap">
+      <div class="sect-head reveal">
+        <span class="label">07 · Tools</span>
+        <h2>What I design and prototype with</h2>
+      </div>
+      <div class="tool-chips reveal">
+        <span class="chip">Figma</span><span class="chip">Figma AI</span><span class="chip">FigJam</span>
+        <span class="chip">Stitch</span><span class="chip">Replit</span><span class="chip">ChatGPT</span>
+        <span class="chip">Claude</span><span class="chip">Sketch</span><span class="chip">Adobe XD</span>
+        <span class="chip">Adobe Photoshop</span><span class="chip">Adobe Illustrator</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sect" id="contact" style="border-top:none; padding-top:0;">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="contact-inner">
+          <div>
+            <span class="label" style="color:#8A6A2A;">08 · Hire me</span>
+            <h2 style="margin-top:14px;">Hiring a Product Designer?</h2>
+            <p>6+ years designing and scaling AI-augmented SaaS, FinTech, EdTech and HealthTech products — from problem definition and user flows through design systems and developer handoff.</p>
+          </div>
+          <div class="contact-ctas">
+            <a href="Adeel_Resume.pdf" class="btn primary" download>Download CV</a>
+            <a href="mailto:adeelriaz017@gmail.com" class="btn ghost">Let's chat</a>
+            <a href="https://www.fiverr.com/s/Ay9vEdY" class="btn fiverr" target="_blank" rel="noopener">Hire me on Fiverr ↗</a>
+            <span class="direct">Or write directly: <a href="mailto:adeelriaz017@gmail.com">adeelriaz017@gmail.com</a></span>
+            <span class="direct">+92 305 7162217 · Lahore, Pakistan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <span class="name" style="font-family:var(--display); font-size:18px; font-weight:600;">Adeel Riaz</span>
+      <p>Designing clear, AI-augmented digital products for teams that care about their users.</p>
+      <span class="eyebrow" style="margin-top:10px;"><span class="dot"></span>Open to new roles</span>
+    </div>
+    <div class="f-cols">
+      <div class="f-col">
+        <h5>Explore</h5>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#testimonials">Testimonials</a>
+      </div>
+      <div class="f-col">
+        <h5>Elsewhere</h5>
+        <a href="https://www.behance.net/adeelriaz02e1b" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.fiverr.com/s/Ay9vEdY" target="_blank" rel="noopener">Fiverr</a>
+      </div>
+      <div class="f-col">
+        <h5>Contact</h5>
+        <a href="mailto:adeelriaz017@gmail.com">adeelriaz017@gmail.com</a>
+        <a href="mailto:adeelriaz017@gmail.com">Start a conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Adeel Riaz. All rights reserved.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  document.querySelectorAll('.view-case-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = document.getElementById(btn.dataset.target);
+      const open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.querySelector('.chev').textContent = open ? '⌃' : '⌄';
+      btn.childNodes[0].textContent = open ? 'Hide Case Study ' : 'View Case Study ';
+    });
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
